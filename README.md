@@ -1,80 +1,108 @@
-# Academic Project Page Template
+# Single-Query Person-Centric Bimanual Hand-Object Interaction Detection
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+This repository contains the project page for:
 
-A clean, responsive template for academic project pages.
+> **Single-Query Person-Centric Bimanual Hand-Object Interaction Detection**
+> Jonghyun Kim*, Junho Roh*, Yubin Yoon, Hyotae Lee, Jongkuk Park, Taehwan Hwang, Jaechul Kim†, and Jungho Lee†
+> ECCV 2026
+> *Equal contribution
+> †Corresponding authors
 
+## Project Page
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+The project page is available at:
 
+```text
+https://LGECTO-AIL-VIL.github.io/SingleQuery-BHOI/
+```
 
+## Overview
 
-## Start using the template
-To start using the template click on `Use this Template`.
+This project introduces **person-centric bimanual hand-object interaction detection**.
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+Given an input image, the goal is to detect each person and jointly predict:
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+* Human bounding box
+* Body keypoints
+* Left and right hand boxes
+* Left and right hand contact states
+* Left and right interaction targets
 
-## What's New
+Unlike hand-centric approaches that treat each hand independently, our method represents each person with a single query and predicts the full bimanual interaction structure under the corresponding human instance.
 
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
+## Resources
 
-## Components
+| Resource     | Link                                                | Status      |
+| ------------ | --------------------------------------------------- | ----------- |
+| Project page | `https://LGECTO-AIL-VIL.github.io/SingleQuery-BHOI/`         | Available   |
+| Paper        | Coming soon                                         | Coming soon |
+| Code         | Coming soon                                         | Coming soon |
+| Dataset      | `https://github.com/LGECTO-AIL-VIL/SingleQuery-BHOI-Dataset` | Available   |
+| arXiv        | Coming soon                                         | Coming soon |
 
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
-- BibTeX citation
+## Dataset
 
-## Customization
+The dataset repository provides COCO Panoptic-style annotations, example files, and an executable-based visualization tool.
 
-The HTML file has TODO comments showing what to replace:
+Dataset repository:
 
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
+```text
+https://github.com/LGECTO-AIL-VIL/SingleQuery-BHOI-Dataset
+```
 
-### Meta Tags
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
+The full dataset is based on COCO images.
+We do not redistribute the full COCO image dataset. Users should download the original images from the official COCO dataset website and follow the corresponding image licenses and terms of use.
 
-Create a 1200x630px social preview image at `static/images/social_preview.png`.
+## Repository Structure
 
-## Tips
+```text
+SingleQuery-BHOI/
+├── index.html
+├── README.md
+└── static/
+    └── images/
+        ├── teaser.png
+        ├── architecture.png
+        ├── dataset_examples.png
+        ├── company_logo.png
+        └── favicon.png
+```
 
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
+## Local Preview
 
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+This is a static HTML project page.
+To preview it locally, open `index.html` in a browser.
 
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+Alternatively, run a simple local server:
+
+```bash
+python -m http.server 8000
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+## Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@inproceedings{kim2026singlequery,
+  title     = {Single-Query Person-Centric Bimanual Hand-Object Interaction Detection},
+  author    = {Jonghyun Kim and Junho Roh and Yubin Yoon and Jaechul Kim and Jungho Lee and Hyotae Lee and Jongkuk Park and Taehwan Hwang},
+  booktitle = {European Conference on Computer Vision},
+  year      = {2026}
+}
+```
+
+## Acknowledgement
+
+This project page is adapted from the Academic Project Page template.
+
+## License
+
+The website source is released for research and academic project-page use.
+Please refer to the original template license if reusing the page template.
